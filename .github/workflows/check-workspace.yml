@@ -1,0 +1,49 @@
+# Various checks to verify the cargo workspace and its crates are correctly configured.
+name: "Workspace"
+
+on:
+  push:
+    branches: ["main", "release-*"]
+  pull_request:
+  workflow_dispatch:
+
+# cancel previous runs
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  clippy:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Install stable Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+
+      - name: Install Zepter
+        run: cargo install --locked -q zepter && zepter --version
+    
+      - name: Install Taplo
+        env:
+          version: "0.8.1"
+        run: |
+          curl -Ls "https://github.com/tamasfe/taplo/releases/download/${{ env.version }}/taplo-full-linux-x86_64.gz" | gzip -d > taplo
+          chmod +x taplo
+          sudo mv taplo /usr/local/bin/taplo
+          taplo --version
+
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Dont clone historic commits.
+
+      - name: Check features
+        run: zepter run check
+
+      - name: Format TOML
+        run: |
+          taplo format --check --config .config/taplo.toml
+          echo "Please run `taplo format --config .config/taplo.toml` to fix any toml formatting issues"
