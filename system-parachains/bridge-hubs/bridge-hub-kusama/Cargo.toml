@@ -9,7 +9,7 @@ repository.workspace = true
 version.workspace = true
 
 [build-dependencies]
-substrate-wasm-builder = { optional = true , version = "16.0.0" }
+substrate-wasm-builder = { optional = true, version = "16.0.0" }
 
 [dependencies]
 codec = { package = "parity-scale-codec", version = "3.6.9", default-features = false, features = ["derive"] }
@@ -19,12 +19,12 @@ scale-info = { version = "2.10.0", default-features = false, features = ["derive
 serde = { version = "1.0.195", optional = true, features = ["derive"] }
 
 # Local
-bp-asset-hub-kusama = { path = "../../asset-hubs/asset-hub-kusama/primitives", default-features = false}
-bp-asset-hub-polkadot = { path = "../../asset-hubs/asset-hub-polkadot/primitives", default-features = false}
-bp-bridge-hub-kusama = { path = "./primitives", default-features = false}
-bp-bridge-hub-polkadot = { path = "../bridge-hub-polkadot/primitives", default-features = false}
-kusama-runtime-constants = { path = "../../../relay/kusama/constants", default-features = false}
-polkadot-runtime-constants = { path = "../../../relay/polkadot/constants", default-features = false}
+bp-asset-hub-kusama = { path = "../../asset-hubs/asset-hub-kusama/primitives", default-features = false }
+bp-asset-hub-polkadot = { path = "../../asset-hubs/asset-hub-polkadot/primitives", default-features = false }
+bp-bridge-hub-kusama = { path = "./primitives", default-features = false }
+bp-bridge-hub-polkadot = { path = "../bridge-hub-polkadot/primitives", default-features = false }
+kusama-runtime-constants = { path = "../../../relay/kusama/constants", default-features = false }
+polkadot-runtime-constants = { path = "../../../relay/polkadot/constants", default-features = false }
 
 # Substrate
 frame-benchmarking = { default-features = false, optional = true, version = "27.0.0" }
@@ -37,7 +37,7 @@ frame-try-runtime = { default-features = false, optional = true, version = "0.33
 pallet-aura = { default-features = false, version = "26.0.0" }
 pallet-authorship = { default-features = false, version = "27.0.0" }
 pallet-balances = { default-features = false, version = "27.0.0" }
-pallet-message-queue = { default-features = false , version = "30.0.0" }
+pallet-message-queue = { default-features = false, version = "30.0.0" }
 pallet-multisig = { default-features = false, version = "27.0.0" }
 pallet-session = { default-features = false, version = "27.0.0" }
 pallet-timestamp = { default-features = false, version = "26.0.0" }
@@ -48,7 +48,7 @@ sp-api = { default-features = false, version = "25.0.0" }
 sp-block-builder = { default-features = false, version = "25.0.0" }
 sp-consensus-aura = { default-features = false, version = "0.31.0" }
 sp-core = { default-features = false, version = "27.0.0" }
-sp-genesis-builder = { default-features = false , version = "0.6.0" }
+sp-genesis-builder = { default-features = false, version = "0.6.0" }
 sp-inherents = { default-features = false, version = "25.0.0" }
 sp-io = { default-features = false, version = "29.0.0" }
 sp-offchain = { default-features = false, version = "25.0.0" }
@@ -61,7 +61,7 @@ sp-version = { default-features = false, version = "28.0.0" }
 
 # Polkadot
 pallet-xcm = { default-features = false, version = "6.0.0" }
-pallet-xcm-benchmarks = { default-features = false, optional = true , version = "6.0.2" }
+pallet-xcm-benchmarks = { default-features = false, optional = true, version = "6.0.2" }
 polkadot-core-primitives = { default-features = false, version = "6.0.0" }
 polkadot-parachain-primitives = { default-features = false, version = "5.0.0" }
 polkadot-runtime-common = { default-features = false, version = "6.0.0" }
@@ -70,34 +70,34 @@ xcm-builder = { package = "staging-xcm-builder", default-features = false, versi
 xcm-executor = { package = "staging-xcm-executor", default-features = false, version = "6.0.2" }
 
 # Cumulus
-cumulus-pallet-aura-ext = { default-features = false , version = "0.6.0" }
-cumulus-pallet-dmp-queue = { default-features = false , version = "0.6.0" }
-cumulus-pallet-parachain-system = { default-features = false, features = ["parameterized-consensus-hook",] , version = "0.6.0" }
+cumulus-pallet-aura-ext = { default-features = false, version = "0.6.0" }
+cumulus-pallet-dmp-queue = { default-features = false, version = "0.6.0" }
+cumulus-pallet-parachain-system = { default-features = false, features = ["parameterized-consensus-hook"], version = "0.6.0" }
 cumulus-pallet-session-benchmarking = { default-features = false, version = "8.0.0" }
-cumulus-pallet-xcm = { default-features = false , version = "0.6.0" }
-cumulus-pallet-xcmp-queue = { default-features = false , features = ["bridging"] , version = "0.6.0" }
-cumulus-primitives-core = { default-features = false , version = "0.6.0" }
-cumulus-primitives-utility = { default-features = false , version = "0.6.2" }
-pallet-collator-selection = { default-features = false , version = "8.0.0" }
-parachain-info = { package = "staging-parachain-info", default-features = false , version = "0.6.0" }
-parachains-common = { default-features = false , version = "6.0.0" }
+cumulus-pallet-xcm = { default-features = false, version = "0.6.0" }
+cumulus-pallet-xcmp-queue = { default-features = false, features = ["bridging"], version = "0.6.0" }
+cumulus-primitives-core = { default-features = false, version = "0.6.0" }
+cumulus-primitives-utility = { default-features = false, version = "0.6.2" }
+pallet-collator-selection = { default-features = false, version = "8.0.0" }
+parachain-info = { package = "staging-parachain-info", default-features = false, version = "0.6.0" }
+parachains-common = { default-features = false, version = "6.0.0" }
 system-parachains-constants = { path = "../../constants", default-features = false }
 
 # Bridges
-bp-header-chain = { default-features = false , version = "0.6.0" }
-bp-messages = { default-features = false , version = "0.6.0" }
-bp-parachains = { default-features = false , version = "0.6.0" }
-bp-polkadot-core = { default-features = false , version = "0.6.0" }
-bp-relayers = { default-features = false , version = "0.6.0" }
-bp-runtime = { default-features = false , version = "0.6.0" }
-bp-kusama = { default-features = false , version = "0.4.0" }
-bp-polkadot = { default-features = false , version = "0.4.0" }
-bridge-runtime-common = { default-features = false , version = "0.6.0" }
-pallet-bridge-grandpa = { default-features = false , version = "0.6.0" }
-pallet-bridge-messages = { default-features = false , version = "0.6.0" }
-pallet-bridge-parachains = { default-features = false , version = "0.6.0" }
-pallet-bridge-relayers = { default-features = false , version = "0.6.0" }
-pallet-xcm-bridge-hub =  { default-features = false , version = "0.1.0" }
+bp-header-chain = { default-features = false, version = "0.6.0" }
+bp-messages = { default-features = false, version = "0.6.0" }
+bp-parachains = { default-features = false, version = "0.6.0" }
+bp-polkadot-core = { default-features = false, version = "0.6.0" }
+bp-relayers = { default-features = false, version = "0.6.0" }
+bp-runtime = { default-features = false, version = "0.6.0" }
+bp-kusama = { default-features = false, version = "0.4.0" }
+bp-polkadot = { default-features = false, version = "0.4.0" }
+bridge-runtime-common = { default-features = false, version = "0.6.0" }
+pallet-bridge-grandpa = { default-features = false, version = "0.6.0" }
+pallet-bridge-messages = { default-features = false, version = "0.6.0" }
+pallet-bridge-parachains = { default-features = false, version = "0.6.0" }
+pallet-bridge-relayers = { default-features = false, version = "0.6.0" }
+pallet-xcm-bridge-hub = { default-features = false, version = "0.1.0" }
 
 [dev-dependencies]
 bridge-hub-test-utils = { version = "0.6.1" }
@@ -106,20 +106,20 @@ sp-keyring = { version = "30.0.0" }
 static_assertions = { version = "1.1.0" }
 
 [features]
-default = [ "std" ]
+default = ["std"]
 std = [
 	"bp-asset-hub-kusama/std",
 	"bp-asset-hub-polkadot/std",
 	"bp-bridge-hub-kusama/std",
 	"bp-bridge-hub-polkadot/std",
 	"bp-header-chain/std",
+	"bp-kusama/std",
 	"bp-messages/std",
 	"bp-parachains/std",
 	"bp-polkadot-core/std",
+	"bp-polkadot/std",
 	"bp-relayers/std",
 	"bp-runtime/std",
-	"bp-kusama/std",
-	"bp-polkadot/std",
 	"bridge-runtime-common/std",
 	"codec/std",
 	"cumulus-pallet-aura-ext/std",
@@ -250,9 +250,9 @@ try-runtime = [
 	"sp-runtime/try-runtime",
 ]
 
-experimental = [ "pallet-aura/experimental" ]
+experimental = ["pallet-aura/experimental"]
 
 # A feature that should be enabled when the runtime should be built for on-chain
 # deployment. This will disable stuff that shouldn't be part of the on-chain wasm
 # to make it smaller, like logging for example.
-on-chain-release-build = [ "sp-api/disable-logging" ]
+on-chain-release-build = ["sp-api/disable-logging"]

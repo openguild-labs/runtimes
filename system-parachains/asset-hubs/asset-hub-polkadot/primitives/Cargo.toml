@@ -12,7 +12,7 @@ codec = { package = "parity-scale-codec", version = "3.6.9", default-features = 
 scale-info = { version = "2.10.0", default-features = false, features = ["derive"] }
 
 # Bridge Dependencies
-bp-xcm-bridge-hub-router = { default-features = false , version = "0.5.0" }
+bp-xcm-bridge-hub-router = { default-features = false, version = "0.5.0" }
 
 # Substrate Based Dependencies
 frame-support = { default-features = false, version = "27.0.0" }
@@ -22,12 +22,12 @@ sp-std = { default-features = false, version = "13.0.0" }
 xcm = { package = "staging-xcm", default-features = false, version = "6.0.0" }
 
 [features]
-default = [ "std" ]
+default = ["std"]
 std = [
 	"bp-xcm-bridge-hub-router/std",
 	"codec/std",
 	"frame-support/std",
 	"scale-info/std",
 	"sp-std/std",
-	"xcm/std"
+	"xcm/std",
 ]

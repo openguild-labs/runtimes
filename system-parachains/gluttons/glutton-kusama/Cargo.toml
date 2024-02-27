@@ -21,12 +21,12 @@ frame-system-rpc-runtime-api = { default-features = false, version = "25.0.0" }
 frame-system-benchmarking = { default-features = false, optional = true, version = "27.0.0" }
 frame-try-runtime = { default-features = false, optional = true, version = "0.33.0" }
 pallet-glutton = { default-features = false, optional = true, version = "13.0.0" }
-pallet-message-queue = { default-features = false , version = "30.0.0" }
+pallet-message-queue = { default-features = false, version = "30.0.0" }
 pallet-sudo = { default-features = false, optional = true, version = "27.0.0" }
 sp-api = { default-features = false, version = "25.0.0" }
 sp-block-builder = { default-features = false, version = "25.0.0" }
 sp-core = { default-features = false, version = "27.0.0" }
-sp-genesis-builder = { default-features = false , version = "0.6.0" }
+sp-genesis-builder = { default-features = false, version = "0.6.0" }
 sp-inherents = { default-features = false, version = "25.0.0" }
 sp-offchain = { default-features = false, version = "25.0.0" }
 sp-runtime = { default-features = false, version = "30.0.1" }
@@ -42,18 +42,18 @@ xcm-builder = { package = "staging-xcm-builder", default-features = false, versi
 xcm-executor = { package = "staging-xcm-executor", default-features = false, version = "6.0.2" }
 
 # Cumulus
-cumulus-pallet-parachain-system = { default-features = false, features = ["parameterized-consensus-hook",] , version = "0.6.0" }
-cumulus-pallet-xcm = { default-features = false , version = "0.6.0" }
-cumulus-primitives-core = { default-features = false , version = "0.6.0" }
-parachain-info = { package = "staging-parachain-info", default-features = false , version = "0.6.0" }
-parachains-common = { default-features = false , version = "6.0.0" }
+cumulus-pallet-parachain-system = { default-features = false, features = ["parameterized-consensus-hook"], version = "0.6.0" }
+cumulus-pallet-xcm = { default-features = false, version = "0.6.0" }
+cumulus-primitives-core = { default-features = false, version = "0.6.0" }
+parachain-info = { package = "staging-parachain-info", default-features = false, version = "0.6.0" }
+parachains-common = { default-features = false, version = "6.0.0" }
 system-parachains-constants = { path = "../../constants", default-features = false }
 
 [build-dependencies]
 substrate-wasm-builder = { version = "16.0.0" }
 
 [features]
-default = [ "std" ]
+default = ["std"]
 runtime-benchmarks = [
 	"cumulus-pallet-parachain-system/runtime-benchmarks",
 	"frame-benchmarking/runtime-benchmarks",
@@ -120,4 +120,4 @@ try-runtime = [
 # A feature that should be enabled when the runtime should be built for on-chain
 # deployment. This will disable stuff that shouldn't be part of the on-chain wasm
 # to make it smaller, like logging for example.
-on-chain-release-build = [ "sp-api/disable-logging" ]
+on-chain-release-build = ["sp-api/disable-logging"]

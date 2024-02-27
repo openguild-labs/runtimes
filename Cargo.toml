@@ -3,13 +3,17 @@ version = "1.0.0"
 authors = ["Polkadot Fellowship"]
 edition = "2021"
 repository = "https://github.com/polkadot-fellows/runtimes.git"
-license = "GPL-3.0-only" # TODO <https://github.com/polkadot-fellows/runtimes/issues/29>
+license = "GPL-3.0-only"                                        # TODO <https://github.com/polkadot-fellows/runtimes/issues/29>
 
 [workspace]
 resolver = "2"
 
 members = [
 	"chain-spec-generator",
+	"integration-tests/emulated/assets/asset-hub-kusama",
+	"integration-tests/emulated/assets/asset-hub-polkadot",
+	"integration-tests/emulated/chains",
+	"integration-tests/emulated/common",
 	"relay/kusama",
 	"relay/kusama/constants",
 	"relay/polkadot",
@@ -26,10 +30,6 @@ members = [
 	"system-parachains/constants",
 	"system-parachains/encointer",
 	"system-parachains/gluttons/glutton-kusama",
-	"integration-tests/emulated/assets/asset-hub-kusama",
-	"integration-tests/emulated/assets/asset-hub-polkadot",
-	"integration-tests/emulated/chains",
-	"integration-tests/emulated/common",
 ]
 
 [profile.release]

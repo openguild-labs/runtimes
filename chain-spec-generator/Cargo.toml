@@ -7,7 +7,7 @@ repository.workspace = true
 license.workspace = true
 
 [dependencies]
-clap = { version = "4.4.4", features = [ "derive" ] }
+clap = { version = "4.4.4", features = ["derive"] }
 hex-literal = "0.4.1"
 serde_json = "1.0.111"
 serde = { version = "1.0.195", features = ["derive"] }
@@ -41,7 +41,7 @@ encointer-kusama-runtime = { path = "../system-parachains/encointer" }
 glutton-kusama-runtime = { path = "../system-parachains/gluttons/glutton-kusama" }
 
 # encointer is not migrated to the latest release, so we use compatible deps, when needed
-sp-core-encointer-compatible = { package = "sp-core",  version = "25.0.0" }
+sp-core-encointer-compatible = { package = "sp-core", version = "25.0.0" }
 
 [features]
 fast-runtime = [
@@ -49,13 +49,13 @@ fast-runtime = [
 	"polkadot-runtime/fast-runtime",
 ]
 runtime-benchmarks = [
-	"asset-hub-polkadot-runtime/runtime-benchmarks",
 	"asset-hub-kusama-runtime/runtime-benchmarks",
-	"bridge-hub-polkadot-runtime/runtime-benchmarks",
+	"asset-hub-polkadot-runtime/runtime-benchmarks",
 	"bridge-hub-kusama-runtime/runtime-benchmarks",
+	"bridge-hub-polkadot-runtime/runtime-benchmarks",
 	"collectives-polkadot-runtime/runtime-benchmarks",
-	"kusama-runtime/runtime-benchmarks",
-	"polkadot-runtime/runtime-benchmarks",
 	"encointer-kusama-runtime/runtime-benchmarks",
 	"glutton-kusama-runtime/runtime-benchmarks",
+	"kusama-runtime/runtime-benchmarks",
+	"polkadot-runtime/runtime-benchmarks",
 ]
