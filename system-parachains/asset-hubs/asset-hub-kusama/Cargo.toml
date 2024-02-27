@@ -113,11 +113,13 @@ default = ["std"]
 # This feature should be removed when the main-net will be migrated.
 state-trie-version-1 = ["pallet-state-trie-migration"]
 runtime-benchmarks = [
+	"asset-test-utils/runtime-benchmarks",
 	"assets-common/runtime-benchmarks",
 	"cumulus-pallet-dmp-queue/runtime-benchmarks",
 	"cumulus-pallet-parachain-system/runtime-benchmarks",
 	"cumulus-pallet-session-benchmarking/runtime-benchmarks",
 	"cumulus-pallet-xcmp-queue/runtime-benchmarks",
+	"cumulus-primitives-core/runtime-benchmarks",
 	"cumulus-primitives-utility/runtime-benchmarks",
 	"frame-benchmarking/runtime-benchmarks",
 	"frame-support/runtime-benchmarks",
@@ -139,6 +141,7 @@ runtime-benchmarks = [
 	"pallet-xcm-benchmarks/runtime-benchmarks",
 	"pallet-xcm-bridge-hub-router/runtime-benchmarks",
 	"pallet-xcm/runtime-benchmarks",
+	"parachains-common/runtime-benchmarks",
 	"polkadot-parachain-primitives/runtime-benchmarks",
 	"polkadot-runtime-common/runtime-benchmarks",
 	"sp-runtime/runtime-benchmarks",
@@ -232,6 +235,7 @@ std = [
 	"polkadot-parachain-primitives/std",
 	"polkadot-runtime-common/std",
 	"polkadot-runtime-constants/std",
+	"primitive-types/std",
 	"scale-info/std",
 	"sp-api/std",
 	"sp-block-builder/std",
