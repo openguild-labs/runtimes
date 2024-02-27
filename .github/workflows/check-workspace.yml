@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  clippy:
+  check:
     runs-on: ubuntu-22.04
 
     steps:
@@ -45,5 +45,5 @@ jobs:
 
       - name: Format TOML
         run: |
-          taplo format --check --config .config/taplo.toml
-          echo "Please run `taplo format --config .config/taplo.toml` to fix any toml formatting issues"
+          taplo format --check --config .config/taplo.toml || \
+          (echo "👋 Hello developer! If you see this check failing in CI, then please run `taplo format --config .config/taplo.toml` to fix any TOML formatting issues" && exit 1)
